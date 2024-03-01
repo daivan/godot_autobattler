@@ -8,7 +8,7 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	if GameManager.get_world_map_node() == self.world_map_node:
 		var sprite = $Sprite2D
 		sprite.modulate = Color(.1, 1, .1)
@@ -32,6 +32,7 @@ func setup(world_map_node_resource):
 func _on_button_select_pressed():
 	GameManager.set_world_map_node(self.world_map_node)
 	var selected = GameManager.get_world_map_node()
+	WorldMapSignals.WORLD_MAP_NODE_CHANGED.emit(selected)
 
 func disabled():
 	var buttonSelect = $ButtonSelect

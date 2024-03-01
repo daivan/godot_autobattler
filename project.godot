@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 GameManager="*res://src/autoloads/game_manager.gd"
 SaveLoadManager="*res://src/autoloads/save_load_manager.gd"
+WorldMapSignals="*res://src/autoloads/world_map_signals.gd"
 
 [display]
 

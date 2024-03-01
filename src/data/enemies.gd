@@ -2,21 +2,16 @@ class_name EnemyInformation extends Node
 
 const ENEMY_DATA_ARRAY: Dictionary = {
 	"wolf": {
-		"terrain_type": "ruins",
-		"enemy_array": [
-			{
-				"name": "enemy 1",
-				"health": 100
-			},
-			{
-				"name": "enemy 1",
-				"health": 100
-			}
-		]
+		"type": "wolf",
+		"name": "wolfie",
+		"max_health": 100,
+		"current_health": 100,
 	},
 	"skeleton": {
-		"terrain_type": "ruins",
-		"enemy_array": []
+		"type": "skeleton",
+		"name": "Skeletooor",
+		"max_health": 200,
+		"current_health": 200,
 	}
 }
 
@@ -26,4 +21,8 @@ func get_enemy_by_name(enemy_key: String) -> EnemyData:
 
 func convert_to_resource(enemy_dictionary) -> EnemyData:
 	var enemy_data = EnemyData.new()
+	enemy_data.name = enemy_dictionary.name
+	enemy_data.max_health = enemy_dictionary.max_health
+	enemy_data.current_health = enemy_dictionary.current_health
+	enemy_data.type = enemy_dictionary.type
 	return enemy_data

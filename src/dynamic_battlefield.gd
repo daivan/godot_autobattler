@@ -13,8 +13,10 @@ var enemy_agent = preload("res://src/units/enemy_axeman.tscn")
 var game_win:bool = false
 @onready var win_battle_scene = $WinBattleScene
 
-func _ready():	
-	self.level_data = LevelData.load()
+func _ready():
+	var world_map_node = GameManager.get_world_map_node()
+	
+	self.level_data = world_map_node.level_data
 	self.enemy_array = level_data['enemy_array']
 
 	var terrain_type = self.level_data.terrain_type

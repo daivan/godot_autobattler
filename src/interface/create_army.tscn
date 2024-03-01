@@ -1,12 +1,19 @@
-[gd_scene load_steps=5 format=3 uid="uid://cyyp6i5v2mqup"]
+[gd_scene load_steps=6 format=3 uid="uid://cyyp6i5v2mqup"]
 
 [ext_resource type="Script" path="res://src/interface/create_army.gd" id="1_7uoiu"]
 [ext_resource type="Texture2D" uid="uid://4u2tsww01s0n" path="res://assets/tilemaps/MiniLumberjack_scaled_2x.png" id="2_50pq6"]
+[ext_resource type="Texture2D" uid="uid://chm05eam7n377" path="res://assets/background/start_menu.png" id="2_vp75q"]
 [ext_resource type="Texture2D" uid="uid://bg7nxj4gc5idv" path="res://assets/tilemaps/MiniWorker_scaled_2x.png" id="3_tjsl2"]
 [ext_resource type="Texture2D" uid="uid://b18s5prfr3xrl" path="res://assets/tilemaps/MiniPeasant_scaled_2x.png" id="4_3ivlm"]
 
 [node name="CreateArmy" type="Node2D"]
 script = ExtResource("1_7uoiu")
+
+[node name="SpriteBackground" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.384314)
+position = Vector2(384, 216)
+scale = Vector2(0.333333, 0.333333)
+texture = ExtResource("2_vp75q")
 
 [node name="Label" type="Label" parent="."]
 offset_left = 25.0

@@ -1,10 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://5aqgxy8pi1i3"]
+[gd_scene load_steps=4 format=3 uid="uid://5aqgxy8pi1i3"]
 
 [ext_resource type="Script" path="res://src/interface/world_map.gd" id="1_3g010"]
 [ext_resource type="PackedScene" uid="uid://cofhwm3lpr704" path="res://src/interface/selected_mission.tscn" id="2_1wqfk"]
+[ext_resource type="PackedScene" uid="uid://uhgk4w5w7kx8" path="res://src/tilemaps/world_map.tscn" id="2_rx5hr"]
 
 [node name="WorldMap" type="Node2D"]
 script = ExtResource("1_3g010")
+
+[node name="TileMap" parent="." instance=ExtResource("2_rx5hr")]
+layer_2/tile_data = PackedInt32Array()
 
 [node name="Label" type="Label" parent="."]
 offset_right = 40.0
@@ -12,13 +16,14 @@ offset_bottom = 23.0
 text = "Select mission"
 
 [node name="ButtonConfigureArmy" type="Button" parent="."]
-offset_left = 10.0
-offset_top = 274.0
-offset_right = 140.0
-offset_bottom = 305.0
+offset_left = 19.0
+offset_top = 379.0
+offset_right = 149.0
+offset_bottom = 410.0
 text = "Configure Army"
 
 [node name="SelectedMission" parent="." instance=ExtResource("2_1wqfk")]
+visible = false
 top_level = true
 position = Vector2(415, -1)
 

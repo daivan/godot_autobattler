@@ -1,24 +1,24 @@
 [gd_scene load_steps=3 format=3 uid="uid://cxk8siawvivnd"]
 
 [ext_resource type="Script" path="res://src/interface/world_map_node.gd" id="1_3mp7t"]
-[ext_resource type="Texture2D" uid="uid://d0u5sxhyhrnwv" path="res://icon.svg" id="1_e23q6"]
+[ext_resource type="Texture2D" uid="uid://5331cglk51gw" path="res://assets/world_map_nodes/mine.png" id="2_x06ax"]
 
 [node name="WorldMapNode" type="Node2D"]
 script = ExtResource("1_3mp7t")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(1, -2)
-scale = Vector2(0.265625, 0.265625)
-texture = ExtResource("1_e23q6")
+texture = ExtResource("2_x06ax")
 
 [node name="ButtonSelect" type="Button" parent="."]
-offset_left = -31.0
-offset_top = 4.0
-offset_right = 34.0
-offset_bottom = 35.0
+offset_left = -24.0
+offset_top = 16.0
+offset_right = 30.0
+offset_bottom = 47.0
 text = "Select"
 
 [node name="Label" type="Label" parent="."]
+visible = false
 offset_left = -20.0
 offset_top = -34.0
 offset_right = 23.0
