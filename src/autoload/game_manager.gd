@@ -14,6 +14,7 @@ var gold: int = 0
 var beaten_level_names_array: Array = []
 
 var current_army: ArmyData
+var current_inventory: Array = []
 
 func getPlayer() -> Array:
 	return [10, 20, 30]
@@ -46,7 +47,7 @@ func start_new_game(selected_army: String) -> void:
 	self.beaten_level_names_array = []
 	
 	self.current_army = ArmyData.new_game_army(selected_army)
-
+	self.current_inventory = ['longsword','longsword']
 
 
 # --- Function win_battlefield
@@ -88,3 +89,6 @@ func is_game_in_progress() -> bool:
 
 func get_army() -> ArmyData:
 	return self.current_army
+
+func get_inventory() -> Array:
+	return self.current_inventory

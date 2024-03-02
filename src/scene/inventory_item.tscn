@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://6cw48iaotyah"]
+
+[ext_resource type="Script" path="res://src/scene/inventory_item.gd" id="1_trxdf"]
+
+[node name="InventoryItem" type="TextureRect"]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_trxdf")
+
+[node name="Panel" type="Panel" parent="."]
+show_behind_parent = true
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2

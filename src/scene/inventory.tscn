@@ -1,35 +1,42 @@
-[gd_scene load_steps=3 format=3 uid="uid://c2srx444c6rt3"]
+[gd_scene load_steps=4 format=3 uid="uid://c2srx444c6rt3"]
 
 [ext_resource type="Texture2D" uid="uid://52mtln25cin" path="res://asset/character_item/longsword.png" id="1_jfxw0"]
-[ext_resource type="Texture2D" uid="uid://o1icatn67ptb" path="res://asset/character_item/empty_item_slot_1.png" id="2_fdsfm"]
+[ext_resource type="Script" path="res://src/scene/inventory.gd" id="1_xrpsk"]
+[ext_resource type="PackedScene" uid="uid://6cw48iaotyah" path="res://src/scene/inventory_item.tscn" id="4_x4bys"]
 
 [node name="Inventory" type="Node2D"]
+script = ExtResource("1_xrpsk")
 
 [node name="Label" type="Label" parent="."]
 offset_right = 40.0
 offset_bottom = 23.0
 text = "Inventory"
 
-[node name="Longsword" type="Sprite2D" parent="."]
-position = Vector2(38, 77)
+[node name="InventoryItem2" parent="." instance=ExtResource("4_x4bys")]
+custom_minimum_size = Vector2(40, 40)
+offset_top = 40.0
+offset_bottom = 80.0
 texture = ExtResource("1_jfxw0")
+expand_mode = 1
 
-[node name="EmptyItemSlot5" type="Sprite2D" parent="."]
-position = Vector2(91, 77)
-texture = ExtResource("2_fdsfm")
+[node name="InventoryItem" parent="." instance=ExtResource("4_x4bys")]
+custom_minimum_size = Vector2(40, 40)
+offset_left = 48.0
+offset_top = 88.0
+offset_right = 88.0
+offset_bottom = 128.0
+expand_mode = 1
 
-[node name="EmptyItemSlot1" type="Sprite2D" parent="."]
-position = Vector2(63, 78)
-texture = ExtResource("2_fdsfm")
+[node name="InventoryItem3" parent="." instance=ExtResource("4_x4bys")]
+custom_minimum_size = Vector2(40, 40)
+offset_top = 88.0
+offset_bottom = 128.0
+expand_mode = 1
 
-[node name="EmptyItemSlot2" type="Sprite2D" parent="."]
-position = Vector2(36, 108)
-texture = ExtResource("2_fdsfm")
-
-[node name="EmptyItemSlot3" type="Sprite2D" parent="."]
-position = Vector2(60, 106)
-texture = ExtResource("2_fdsfm")
-
-[node name="EmptyItemSlot4" type="Sprite2D" parent="."]
-position = Vector2(87, 104)
-texture = ExtResource("2_fdsfm")
+[node name="InventoryItem4" parent="." instance=ExtResource("4_x4bys")]
+custom_minimum_size = Vector2(40, 40)
+offset_left = 48.0
+offset_top = 40.0
+offset_right = 88.0
+offset_bottom = 80.0
+expand_mode = 1

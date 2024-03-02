@@ -30,7 +30,7 @@ func _ready():
 func setup_terrain(terrain_type: String):
 	
 	
-	var tile_map_ruins = load("res://src/tile_map.tscn")
+	var tile_map_ruins = load("res://src/tilemap/tile_map.tscn")
 	var tile_map = tile_map_ruins.instantiate()
 	#if terrain_type == 'ruins':
 	#	var tile_map_grass = load("res://src/tile_map_grass_ruins.tscn")

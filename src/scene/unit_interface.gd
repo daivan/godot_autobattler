@@ -5,8 +5,10 @@ func setup(unit_data: UnitData):
 	$LabelName.text = unit_data.name
 	
 	self.set_correct_unit_type(unit_data.unit_type)
+	self.set_correct_item_type(unit_data.item_slot_1, 'item_slot_1')
 
-	if unit_data.item_slot_1 != '':
+func set_correct_item_type(unit_data_item_slot: String, item_slot_number: String) -> void:
+	if unit_data_item_slot != '':
 		var new_texture = load("res://asset/character_item/longsword.png")
 		$SpriteItemSlot1.texture = new_texture
 
