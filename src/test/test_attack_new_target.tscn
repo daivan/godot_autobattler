@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://b4bbntxnk0jw"]
 
-[ext_resource type="PackedScene" uid="uid://d07vtcft4xqnm" path="res://src/tile_map.tscn" id="1_2xp6t"]
+[ext_resource type="PackedScene" uid="uid://d07vtcft4xqnm" path="res://src/tilemap/tile_map.tscn" id="1_2xp6t"]
 [ext_resource type="Script" path="res://src/test/test_attack_new_target.gd" id="1_ra4v0"]
-[ext_resource type="PackedScene" uid="uid://cpxo11xvu4m8m" path="res://src/agent.tscn" id="2_jtxeh"]
-[ext_resource type="PackedScene" uid="uid://dkteq3wadfeo5" path="res://src/target_dummy.tscn" id="3_7jrjf"]
+[ext_resource type="PackedScene" uid="uid://cpxo11xvu4m8m" path="res://src/actor/agent.tscn" id="2_jtxeh"]
+[ext_resource type="PackedScene" uid="uid://dkteq3wadfeo5" path="res://src/actor/target_dummy.tscn" id="3_7jrjf"]
 
 [node name="TestAttackNewTarget" type="Node2D"]
 script = ExtResource("1_ra4v0")

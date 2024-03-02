@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://byr7c52kvacs5"]
 
-[ext_resource type="PackedScene" uid="uid://d07vtcft4xqnm" path="res://src/tile_map.tscn" id="1_ayb4y"]
+[ext_resource type="PackedScene" uid="uid://d07vtcft4xqnm" path="res://src/tilemap/tile_map.tscn" id="1_ayb4y"]
 [ext_resource type="Script" path="res://src/test/test_axeman_battle.gd" id="1_eygvh"]
 [ext_resource type="PackedScene" uid="uid://bwrdbtmro0baw" path="res://src/actor/axeman.tscn" id="3_fyeot"]
 [ext_resource type="PackedScene" uid="uid://b0dfatjrrakas" path="res://src/actor/enemy_axeman.tscn" id="4_8xmo4"]
