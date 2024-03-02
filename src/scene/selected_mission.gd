@@ -33,7 +33,7 @@ func _on_world_map_node_changed(world_map_node: WorldMapNodeData):
 	
 
 func _on_button_start_mission_pressed():
-	get_tree().change_scene_to_file("res://src/dynamic_battlefield.tscn")
+	get_tree().change_scene_to_file("res://src/scene/dynamic_battlefield.tscn")
 
 func _on_button_cancel_pressed():
 	GameManager.clear_world_map_node()

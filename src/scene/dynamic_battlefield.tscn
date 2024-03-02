@@ -1,6 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://683xtus68usm"]
+[gd_scene load_steps=4 format=3 uid="uid://cgl3fmrnvrurr"]
 
-[ext_resource type="Script" path="res://src/dynamic_battlefield.gd" id="1_bbq8a"]
+[ext_resource type="Script" path="res://src/scene/dynamic_battlefield.gd" id="1_bbq8a"]
 [ext_resource type="PackedScene" uid="uid://6c7i1eh53neo" path="res://src/scene/win_battle_scene.tscn" id="5_pajbo"]
 [ext_resource type="PackedScene" uid="uid://cdg6x0jqlwhcu" path="res://src/scene/lose_battle_scene.tscn" id="6_mmfli"]
 
