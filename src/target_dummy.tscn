@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://dkteq3wadfeo5"]
 
-[ext_resource type="Texture2D" uid="uid://m4t4suyql5ik" path="res://assets/enemies/tile_0108.png" id="1_aq3vg"]
+[ext_resource type="Texture2D" uid="uid://m4t4suyql5ik" path="res://asset/character/tile_0108.png" id="1_aq3vg"]
 [ext_resource type="Script" path="res://src/target_dummy.gd" id="1_qche7"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_w5a14"]

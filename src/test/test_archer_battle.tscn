@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://d07vtcft4xqnm" path="res://src/tile_map.tscn" id="1_xyql5"]
 [ext_resource type="PackedScene" uid="uid://dkteq3wadfeo5" path="res://src/target_dummy.tscn" id="3_h6lhu"]
-[ext_resource type="PackedScene" uid="uid://bwrdbtmro0baw" path="res://src/units/axeman.tscn" id="4_npyuo"]
+[ext_resource type="PackedScene" uid="uid://bwrdbtmro0baw" path="res://src/actor/axeman.tscn" id="4_npyuo"]
 
 [node name="TestArcherBattle" type="Node2D"]
 

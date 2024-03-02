@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://cpxo11xvu4m8m"]
 
 [ext_resource type="Script" path="res://src/agent.gd" id="1_10d5c"]
-[ext_resource type="Texture2D" uid="uid://6cfh1g1pxye0" path="res://assets/characters/tile_0085.png" id="2_4tmav"]
+[ext_resource type="Texture2D" uid="uid://6cfh1g1pxye0" path="res://asset/character/tile_0085.png" id="2_4tmav"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_lr5jp"]
 radius = 9.21954

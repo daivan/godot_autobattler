@@ -4,11 +4,11 @@ var army_data: ArmyData
 var level_data: LevelData
 var enemy_array: Array = []
 
-var axeman_unit = preload("res://src/units/axeman.tscn")
-var worker_unit = preload("res://src/units/worker.tscn")
-var peasant_unit = preload("res://src/units/peasant.tscn")
+var axeman_unit = preload("res://src/actor/axeman.tscn")
+var worker_unit = preload("res://src/actor/worker.tscn")
+var peasant_unit = preload("res://src/actor/peasant.tscn")
 
-var enemy_agent = preload("res://src/units/enemy_axeman.tscn")
+var enemy_agent = preload("res://src/actor/enemy_axeman.tscn")
 
 var game_win:bool = false
 @onready var win_battle_scene = $WinBattleScene

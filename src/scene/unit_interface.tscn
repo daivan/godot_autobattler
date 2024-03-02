@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://c6cln0kroi06a"]
+
+[ext_resource type="Script" path="res://src/scene/unit_interface.gd" id="1_0700p"]
+[ext_resource type="Texture2D" uid="uid://5v1i40dw0vt" path="res://asset/character/tile_0084.png" id="2_lstpr"]
+[ext_resource type="Texture2D" uid="uid://o1icatn67ptb" path="res://asset/character_item/empty_item_slot_1.png" id="3_xdyjj"]
+
+[node name="UnitInterface" type="Node2D"]
+script = ExtResource("1_0700p")
+
+[node name="SpriteUnitType" type="Sprite2D" parent="."]
+texture = ExtResource("2_lstpr")
+
+[node name="LabelName" type="Label" parent="."]
+offset_left = -22.0
+offset_top = -32.0
+offset_right = 18.0
+offset_bottom = -9.0
+
+[node name="SpriteItemSlot3" type="Sprite2D" parent="."]
+position = Vector2(24, 20)
+texture = ExtResource("3_xdyjj")
+
+[node name="SpriteItemSlot2" type="Sprite2D" parent="."]
+position = Vector2(0, 21)
+texture = ExtResource("3_xdyjj")
+
+[node name="SpriteItemSlot1" type="Sprite2D" parent="."]
+position = Vector2(-23, 21)
+texture = ExtResource("3_xdyjj")

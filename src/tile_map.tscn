@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://d07vtcft4xqnm"]
 
-[ext_resource type="Texture2D" uid="uid://csxk588nvtek6" path="res://assets/tilemaps/tilemap_scaled_2x.png" id="1_yl3k8"]
+[ext_resource type="Texture2D" uid="uid://csxk588nvtek6" path="res://asset/tilemap/tilemap_scaled_2x.png" id="1_yl3k8"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_5ugys"]
 vertices = PackedVector2Array(16, 16, -16, 16, -16, -16, 16, -16)

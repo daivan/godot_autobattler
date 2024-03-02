@@ -11,15 +11,15 @@ config_version=5
 [application]
 
 config/name="autobattler"
-run/main_scene="res://src/interface/start_menu.tscn"
+run/main_scene="res://src/scene/start_menu.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
 
-GameManager="*res://src/autoloads/game_manager.gd"
-SaveLoadManager="*res://src/autoloads/save_load_manager.gd"
-WorldMapSignals="*res://src/autoloads/world_map_signals.gd"
+GameManager="*res://src/autoload/game_manager.gd"
+SaveLoadManager="*res://src/autoload/save_load_manager.gd"
+WorldMapSignals="*res://src/autoload/world_map_signals.gd"
 
 [display]
 
