@@ -118,7 +118,7 @@ attack_range_component = NodePath("../AttackRangeComponent")
 SPEED = 50
 
 [node name="HealthComponent" parent="." node_paths=PackedStringArray("animation_player") instance=ExtResource("3_ca6b6")]
-position = Vector2(-50, 18)
+position = Vector2(-20, 20)
 animation_player = NodePath("../AnimationPlayer")
 
 [node name="HitboxComponent" parent="." node_paths=PackedStringArray("health_component") instance=ExtResource("4_45035")]

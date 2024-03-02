@@ -14,6 +14,12 @@ func _ready():
 	self.progress_bar_current_health.value = self.current_health
 	
 func _process(delta):
+	
+	if is_dead():
+		self.progress_bar_current_health.visible = false
+	else:
+		self.progress_bar_current_health.visible = true
+		
 	self.progress_bar_current_health.value = self.current_health
 	
 func take_damage(damage_amount: int):

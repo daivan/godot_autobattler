@@ -31,7 +31,7 @@ offset_left = 9.0
 offset_top = 390.0
 offset_right = 193.0
 offset_bottom = 421.0
-text = "Version: 0.13.0"
+text = "Version: 0.13.1"
 
 [node name="LabelTitle" type="Label" parent="."]
 offset_left = 319.0
