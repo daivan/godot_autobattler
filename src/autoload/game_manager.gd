@@ -60,7 +60,7 @@ func start_new_game(selected_army: String) -> void:
 func win_battlefield() -> void:
 	self.current_level += 1
 	add_to_beaten_level_names(self.selected_world_map_node.level_name)
-	self.add_gold(10) # Should come from self.selected_world_map_node
+	self.add_gold(self.selected_world_map_node.reward_gold)
 	SaveLoadManager.save_world_map_data(self.world_map_data)
 	self.clear_world_map_node()
 	

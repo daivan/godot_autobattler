@@ -28,6 +28,7 @@ offset_bottom = 187.0
 text = "select"
 
 [node name="Button" type="Button" parent="Button"]
+layout_mode = 0
 offset_left = 180.0
 offset_top = 6.0
 offset_right = 277.0
@@ -35,6 +36,7 @@ offset_bottom = 37.0
 text = "select"
 
 [node name="Button" type="Button" parent="Button/Button"]
+layout_mode = 0
 offset_left = 180.0
 offset_top = 6.0
 offset_right = 277.0

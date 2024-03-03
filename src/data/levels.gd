@@ -7,30 +7,44 @@ enum Terrain_types {
 const LEVEL_DATA_ARRAY: Dictionary = {
 	"level_1": {
 		"terrain_type": "ruins",
+		"reward_experience": 100,
+		"reward_gold": 50,
 		"enemy_array": ["wolf"]
 	},
 	"level_2": {
 		"terrain_type": "ruins",
+		"reward_experience": 200,
+		"reward_gold": 100,
 		"enemy_array": ["wolf","skeleton"]
 	},
 	"level_3": {
 		"terrain_type": "ruins",
+		"reward_experience": 300,
+		"reward_gold": 150,
 		"enemy_array": ["wolf","skeleton","skeleton"]
 	},
 	"level_4": {
 		"terrain_type": "ruins",
+		"reward_experience": 400,
+		"reward_gold": 200,
 		"enemy_array": ["wolf","skeleton","skeleton","skeleton"]
 	},
 	"level_5": {
 		"terrain_type": "ruins",
+		"reward_experience": 400,
+		"reward_gold": 250,
 		"enemy_array": ["wolf","skeleton","skeleton","skeleton","skeleton"]
 	},
 	"level_6": {
 		"terrain_type": "ruins",
+		"reward_experience": 500,
+		"reward_gold": 300,
 		"enemy_array": ["wolf","skeleton","skeleton","skeleton","skeleton","skeleton"]
 	},
 	"level_7": {
 		"terrain_type": "ruins",
+		"reward_experience": 600,
+		"reward_gold": 400,
 		"enemy_array": ["wolf","skeleton","skeleton","skeleton","skeleton","skeleton","skeleton"]
 	},		
 }
@@ -45,6 +59,8 @@ func get_level_by_name(level_key: String) -> LevelData:
 func convert_to_resource(level_dictionary) -> LevelData:
 	var level_data = LevelData.new()
 	level_data.terrain_type = level_dictionary['terrain_type']
+	level_data.reward_experience = level_dictionary['reward_experience']
+	level_data.reward_gold = level_dictionary['reward_gold']
 	
 	var enemy_array = []
 	var enemy_information = EnemyInformation.new()
