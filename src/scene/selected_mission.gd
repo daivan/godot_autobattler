@@ -6,13 +6,7 @@ extends Node2D
 @onready var reward_gold_label = $RewardGoldLabel
 @onready var reward_experience_label = $RewardExperienceLabel
 
-@onready var sprite_enemy_type_1 = $SpriteEnemyType1
-@onready var sprite_enemy_type_2 = $SpriteEnemyType2
-@onready var sprite_enemy_type_3 = $SpriteEnemyType3
-
-const BAT_SPRITE = preload("res://asset/character/tile_0120.png")
-const GHOST_SPRITE = preload("res://asset/character/tile_0121.png")
-const SPIDER_SPRITE = preload("res://asset/character/tile_0122.png")
+var enemy_array: Array = []
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -26,11 +20,30 @@ func _on_world_map_node_changed(world_map_node: WorldMapNodeData):
 	self.level_name_label.text = world_map_node.level_name
 	self.reward_experience_label.text = str(world_map_node.reward_experience) + ' Exp'
 	self.reward_gold_label.text = str(world_map_node.reward_gold) + ' Gold'
-	self.sprite_enemy_type_1.texture = BAT_SPRITE
-	self.sprite_enemy_type_2.texture = BAT_SPRITE
-	self.sprite_enemy_type_3.texture = BAT_SPRITE
 	self.visible = true
+
+	self.enemy_array = world_map_node.enemy_type_array
 	
+	self.display_enemy_list(self.enemy_array)
+	
+func display_enemy_list(enemy_array: Array) -> void:
+	
+	var enemy_information = EnemyInformation.new()
+
+	var count = 0
+	for enemy_name in enemy_array:
+		var enemy_object = enemy_information.get_enemy_by_name(enemy_name)
+		var newSprite = Sprite2D.new()
+		var texture = load(enemy_object.thumbnail_path)
+		newSprite.texture = texture
+
+		# Set the position of the sprite (adjust as needed)
+		newSprite.position = Vector2((count * 20) + 25, 115)
+
+		# Add the sprite to the scene
+		add_child(newSprite)
+		count = count + 1
+		pass
 
 func _on_button_start_mission_pressed():
 	get_tree().change_scene_to_file("res://src/scene/dynamic_battlefield.tscn")

@@ -1,8 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://cofhwm3lpr704"]
+[gd_scene load_steps=2 format=3 uid="uid://cofhwm3lpr704"]
 
 [ext_resource type="Script" path="res://src/scene/selected_mission.gd" id="1_t8mgf"]
-[ext_resource type="Texture2D" uid="uid://7dc7okhjvbro" path="res://asset/character/tile_0109.png" id="2_c7hl4"]
-[ext_resource type="Texture2D" uid="uid://c3b8cgrb2ukbv" path="res://asset/character/tile_0121.png" id="3_qh356"]
 
 [node name="SelectedMission" type="Node2D"]
 script = ExtResource("1_t8mgf")
@@ -14,9 +12,9 @@ color = Color(0, 1, 1, 0.701961)
 
 [node name="Label2" type="Label" parent="."]
 offset_left = 18.0
-offset_top = 73.0
+offset_top = 80.0
 offset_right = 147.0
-offset_bottom = 252.0
+offset_bottom = 259.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Enemies:
 
@@ -48,21 +46,6 @@ offset_right = 148.0
 offset_bottom = 36.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Selected Mission"
-
-[node name="SpriteEnemyType1" type="Sprite2D" parent="."]
-position = Vector2(46, 124)
-scale = Vector2(2.1875, 2.1875)
-texture = ExtResource("2_c7hl4")
-
-[node name="SpriteEnemyType2" type="Sprite2D" parent="."]
-position = Vector2(97, 124)
-scale = Vector2(2.375, 2.375)
-texture = ExtResource("3_qh356")
-
-[node name="SpriteEnemyType3" type="Sprite2D" parent="."]
-position = Vector2(149, 124)
-scale = Vector2(2.375, 2.375)
-texture = ExtResource("3_qh356")
 
 [node name="ButtonStartMission" type="Button" parent="."]
 offset_left = 220.0
