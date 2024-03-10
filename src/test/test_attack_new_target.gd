@@ -1,7 +1,7 @@
 extends Node2D
 
 # Load the scene
-var hero = preload("res://src/agent.tscn")
+var hero = preload("res://src/actor/agent.tscn")
 
 # Function to spawn the node
 func spawn_node():

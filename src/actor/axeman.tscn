@@ -1,13 +1,44 @@
 [gd_scene load_steps=18 format=3 uid="uid://bwrdbtmro0baw"]
 
 [ext_resource type="PackedScene" uid="uid://bqymrweaohfw0" path="res://src/component/movement_component.tscn" id="1_jxx2n"]
-[ext_resource type="Script" path="res://src/actor/axeman.gd" id="1_wa4d7"]
 [ext_resource type="PackedScene" uid="uid://bmog2avuugi54" path="res://src/component/health_component.tscn" id="2_c4u2r"]
 [ext_resource type="PackedScene" uid="uid://ce75dqmwnnxpp" path="res://src/component/hitbox_component.tscn" id="3_8w0vy"]
 [ext_resource type="PackedScene" uid="uid://boqwt1npb004v" path="res://src/component/attack_component.tscn" id="4_shw1v"]
 [ext_resource type="PackedScene" uid="uid://ulkfbmmjakso" path="res://src/component/attack_range_component.tscn" id="6_ngy4t"]
 [ext_resource type="PackedScene" uid="uid://d0irtd748m7vf" path="res://src/component/target_component.tscn" id="7_y1iuh"]
 [ext_resource type="Texture2D" uid="uid://4u2tsww01s0n" path="res://asset/tilemap/MiniLumberjack_scaled_2x.png" id="8_andvu"]
+
+[sub_resource type="GDScript" id="GDScript_5t2sa"]
+script/source = "extends CharacterBody2D
+
+var current_health: int = 100
+
+@export var target_component: TargetComponent
+@export var health_component: HealthComponent
+
+@onready var sprite_tile_map = $SpriteTileMap
+
+func _ready():
+	#target_component.target_group = 'enemy'
+	pass
+
+func setup(unit_data):
+	#self.add_to_group('hero')
+	pass
+
+func is_dead():
+	return self.health_component.is_dead()
+
+func _process(delta):
+	var velocity = get_velocity()
+	if velocity.x < 0:
+		self.sprite_tile_map.flip_h = true
+	elif velocity.x > 0:
+		self.sprite_tile_map.flip_h = false
+
+func take_damage(damage):
+	self.health_component.take_damage(damage)
+"
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_p7g23"]
 
@@ -107,7 +138,7 @@ _data = {
 }
 
 [node name="Axeman" type="CharacterBody2D" node_paths=PackedStringArray("target_component", "health_component") groups=["hero"]]
-script = ExtResource("1_wa4d7")
+script = SubResource("GDScript_5t2sa")
 target_component = NodePath("TargetComponent")
 health_component = NodePath("HealthComponent")
 

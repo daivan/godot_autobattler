@@ -7,8 +7,16 @@ class_name AttackComponent
 @export var targetComponent:TargetComponent
 
 var can_attack: bool = true
+
+### attack abilities ###
+var double_attack: bool = false
+var spash_attack: bool = false
+var leech_attack: bool = false
+var taunt_attack: bool = false
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	
 	pass # Replace with function body.
 
 

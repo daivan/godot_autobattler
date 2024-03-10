@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://bql0a5lkqfcka"]
+
+[ext_resource type="Script" path="res://src/test/test_axeman_battle.gd" id="1_hauja"]
+[ext_resource type="PackedScene" uid="uid://d07vtcft4xqnm" path="res://src/tilemap/tile_map.tscn" id="2_3qbi7"]
+
+[node name="TestAbilitiesBattle" type="Node2D"]
+script = ExtResource("1_hauja")
+
+[node name="TileMap" parent="." instance=ExtResource("2_3qbi7")]
