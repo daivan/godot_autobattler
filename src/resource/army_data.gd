@@ -4,7 +4,7 @@ class_name ArmyData extends Resource
 
 func save() -> void:
 	ResourceSaver.save(self, "user://army_data.tres")
-	
+	 
 static func load_or_create() -> ArmyData:
 	var res: ArmyData = load("user://army_data.tres") as ArmyData
 	

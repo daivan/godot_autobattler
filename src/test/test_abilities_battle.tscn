@@ -1,9 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://bql0a5lkqfcka"]
+[gd_scene load_steps=2 format=3 uid="uid://bql0a5lkqfcka"]
 
-[ext_resource type="Script" path="res://src/test/test_axeman_battle.gd" id="1_hauja"]
-[ext_resource type="PackedScene" uid="uid://d07vtcft4xqnm" path="res://src/tilemap/tile_map.tscn" id="2_3qbi7"]
+[ext_resource type="Script" path="res://src/test/test_abilities_battle.gd" id="1_fesok"]
 
 [node name="TestAbilitiesBattle" type="Node2D"]
-script = ExtResource("1_hauja")
-
-[node name="TileMap" parent="." instance=ExtResource("2_3qbi7")]
+position = Vector2(1, 0)
+script = ExtResource("1_fesok")

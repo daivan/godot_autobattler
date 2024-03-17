@@ -1,43 +1,40 @@
 extends Node2D
-@onready var axeman = $Axeman
-@onready var enemy_axeman = $EnemyAxeman
 
-# Called when the node enters the scene tree for the first time.
+var level_data:LevelData
+var army_data: ArmyData
+var enemy_group_class = EnemyGroupClass.new()
+var enemy_array: Array
+
+
+var timer = 0.0
+var interval = 1.0 # Interval in seconds
+
 func _ready():
-	axeman.add_to_group('hero')
-	enemy_axeman.add_to_group('enemy')
+
+	# Load corret level
+	var level_logic = LevelLogic.new()
+	self.level_data = level_logic.load_level("level_1")
 	
-	axeman.target_component.target_group = "enemy"
-	enemy_axeman.target_component.target_group = "hero"
-		
-	pass # Replace with function body.
+	#### Which brings correct enemy army
+	self.enemy_group_class.setup(self.level_data.enemy_array)
+	add_child(self.enemy_group_class)
+	
+	# Dynamically load army
+	self.army_data = ArmyData.new_game_army("army_1")
+	var army_group_class = ArmyGroupClass.new()
+	army_group_class.setup(self.army_data.unit_array)
+	add_child(army_group_class)
+	
+	#### Which brings correct map
+	var background = Background.new()
+	background.setup(self.level_data.background_data)
+	add_child(background)
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	var nodes_in_group := get_tree().get_nodes_in_group('hero')
-
-	var game_over = true
-	# Loop through nodes in the group
-	for node in nodes_in_group:
-		# Do something with the node
-		if node.is_dead() == false:
-			game_over = false
-	
-	if game_over == true:
-		var lost_battle_scene = $LoseBattleScene
-		lost_battle_scene.visible = true
-
-	var enemy_nodes_in_group := get_tree().get_nodes_in_group('enemy')
-	
-	var game_win = true
-	# Loop through nodes in the group
-	for enemy_node in enemy_nodes_in_group:
-		# Do something with the node
-		if enemy_node.is_dead() == false:
-			game_win = false
-	
-	if game_win == true:
-		var win_battle_scene = $WinBattleScene
-		win_battle_scene.visible = true
-
+	timer += delta
+	if timer >= interval:
+		timer -= interval
+		enemy_group_class.is_all_dead()
+		print('Varje sekund')
+		
+	pass

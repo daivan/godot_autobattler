@@ -31,7 +31,7 @@ offset_left = 9.0
 offset_top = 390.0
 offset_right = 193.0
 offset_bottom = 421.0
-text = "Version: 0.14.0"
+text = "Version: 0.15.0"
 
 [node name="LabelTitle" type="Label" parent="."]
 offset_left = 319.0
@@ -45,7 +45,6 @@ offset_left = 314.0
 offset_top = 251.0
 offset_right = 422.0
 offset_bottom = 282.0
-disabled = true
 text = "Arena"
 
 [connection signal="pressed" from="ButtonContinue" to="." method="_on_button_pressed"]
